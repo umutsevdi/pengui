@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="static/css/style.css" rel="stylesheet">
+    <script src="static/js/app.js"></script>
+    <script src="static/js/terminal.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h1>System Metrics</h1>
+    <div class="metrics">
+        <div id="cpu-container" class="cpu-container">
+            <label for="cpu-container" class="label">CPU:</label>
+            <div class="cpu-items"></div>
+        </div>
+
+        <div class="mem-container">
+            <label for="mem" class="label">Memory:</label>
+            <progress id="mem" value="0" max="100"></progress>
+        </div>
+        <div class="disk-container">
+            <label for="disk" class="label">Disk:</label>
+            <progress id="disk" value="0" max="100"></progress>
+        </div>
+    </div>
+
+    <table id="process-table">
+        <thead>
+            <tr>
+                <th>PID</th>
+                <th>Name</th>
+                <th>CPU</th>
+                <th>Memory</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div id="terminal">
+        <textarea id="term-o" name="w3review" rows="4" cols="50" readonly=true wrap="soft"></textarea>
+        <input id="term-i" width=150></textarea>
+        <button id="term-b">Send</button>
+    </div>
+</body>
+
+
+</html>

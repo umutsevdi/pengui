@@ -7,12 +7,12 @@ import (
 )
 
 type Host struct {
-	Hostname string
-	Os       string
-	Platform string
-	Kernel   string
-	Uptime   time.Duration
-	Users    []string
+	Hostname string        `json:"host"`
+	Os       string        `json:"os"`
+	Platform string        `json:"platform"`
+	Kernel   string        `json:"kernel"`
+	Uptime   time.Duration `json:"uptime"`
+	Users    []string      `json:"users"`
 }
 
 func GetHostInfo() *Host {
